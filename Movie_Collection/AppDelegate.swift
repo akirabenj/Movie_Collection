@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let networkService = NetworkService()
+        networkService.getMovies { (movies, error) in
+            if let movies = movies {
+                movies.forEach({ (movie) in
+                    print(movie)
+                    print("\n")
+                })
+            }
+        }
         return true
     }
 
