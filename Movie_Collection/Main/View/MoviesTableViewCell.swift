@@ -1,5 +1,5 @@
 //
-//  MovieTableCell.swift
+//  MoviesTableViewCell.swift
 //  Movie_Collection
 //
 //  Created by Admin on 29.03.2020.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class MovieTableCell: UITableViewCell {
-    
+class MoviesTableViewCell: UITableViewCell {
+
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var rate: UILabel!
@@ -26,8 +26,9 @@ class MovieTableCell: UITableViewCell {
     }
     
     func setCell(movie: Movie) {
-        title.text = movie.title ?? ""
         poster.downloadImage(with: movie.posterPath ?? "")
+        title.text = movie.title
         rate.text = String(movie.rate ?? 0.0)
     }
+    
 }

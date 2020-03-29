@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MovieServiceProtocol {
+protocol MovieServiceProtocol: class {
     func getMovies(completion: @escaping ([Movie]?, Error?) -> Void)
 }
 

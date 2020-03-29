@@ -21,9 +21,3 @@ struct Movie {
         rate = jsonDict["average_vote"] as? Double ?? 0.0
     }
 }
-
-struct MovieInfo {
-    var cast: [String]
-    var genres: [String]
-    var director: String
-}
