@@ -8,16 +8,16 @@
 
 import Foundation
 
-protocol NetworkServiceProtocol {
+protocol MovieServiceProtocol {
     func getMovies(completion: @escaping ([Movie]?, Error?) -> Void)
 }
 
-class NetworkService: NetworkServiceProtocol {
+class MovieService: MovieServiceProtocol {
     
     private let apiKey = "22bde7605a09dd12a349031109d8ea62"
     
     func getMovies(completion: @escaping ([Movie]?, Error?) -> Void) {
-        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&language=en-US&query=noire&page=1&include_adult=true"
+        let urlString = "https://api.themoviedb.org/3/search/movie?api_key=\(apiKey)&language=en-US&query=marvel&page=1&include_adult=true"
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { [weak self] (data, _, error) in
@@ -54,5 +54,9 @@ class NetworkService: NetworkServiceProtocol {
             }
             
         }.resume()
+    }
+    
+    func getMovieDetails(id: Int) {
+        
     }
 }

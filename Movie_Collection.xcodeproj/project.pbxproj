@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8402222D2430D1690029CA5E /* MovieTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402222C2430D1690029CA5E /* MovieTableCell.swift */; };
+		841DB85A2430DE65006D0CE4 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841DB8592430DE65006D0CE4 /* UIExtensions.swift */; };
 		845073EA242CEC3E0030A5D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845073E9242CEC3E0030A5D6 /* AppDelegate.swift */; };
 		845073EC242CEC3E0030A5D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845073EB242CEC3E0030A5D6 /* ViewController.swift */; };
 		845073EF242CEC3E0030A5D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845073ED242CEC3E0030A5D6 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8402222C2430D1690029CA5E /* MovieTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableCell.swift; sourceTree = "<group>"; };
+		841DB8592430DE65006D0CE4 /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		845073E6242CEC3E0030A5D6 /* Movie_Collection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie_Collection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845073E9242CEC3E0030A5D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845073EB242CEC3E0030A5D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841DB8582430DE53006D0CE4 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
 		845073DD242CEC3E0030A5D6 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +69,7 @@
 		845073E8242CEC3E0030A5D6 /* Movie_Collection */ = {
 			isa = PBXGroup;
 			children = (
+				841DB8582430DE53006D0CE4 /* New Group1 */,
 				845073FB242CEC760030A5D6 /* New Group */,
 				845073E9242CEC3E0030A5D6 /* AppDelegate.swift */,
 				845073EB242CEC3E0030A5D6 /* ViewController.swift */,
@@ -66,6 +78,8 @@
 				845073F2242CEC3F0030A5D6 /* LaunchScreen.storyboard */,
 				845073F5242CEC3F0030A5D6 /* Info.plist */,
 				84AE2AC0242E86A300C23BAB /* NetworkService.swift */,
+				8402222C2430D1690029CA5E /* MovieTableCell.swift */,
+				841DB8592430DE65006D0CE4 /* UIExtensions.swift */,
 			);
 			path = Movie_Collection;
 			sourceTree = "<group>";
@@ -149,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8402222D2430D1690029CA5E /* MovieTableCell.swift in Sources */,
 				845073EC242CEC3E0030A5D6 /* ViewController.swift in Sources */,
 				845073EA242CEC3E0030A5D6 /* AppDelegate.swift in Sources */,
+				841DB85A2430DE65006D0CE4 /* UIExtensions.swift in Sources */,
 				84AE2AC1242E86A300C23BAB /* NetworkService.swift in Sources */,
 				845073FD242CEC820030A5D6 /* Movie.swift in Sources */,
 			);
@@ -299,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y578K3V42R;
 				INFOPLIST_FILE = Movie_Collection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "none.Movie-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y578K3V42R;
 				INFOPLIST_FILE = Movie_Collection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -324,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "none.Movie-Collection";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

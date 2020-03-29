@@ -10,9 +10,9 @@ import Foundation
 
 struct Movie {
     var id: Int
-    var title: String
-    var posterPath: String
-    var rate: Double
+    var title: String?
+    var posterPath: String?
+    var rate: Double?
     
     init(jsonDict: [String: Any?]) {
         id = jsonDict["id"] as? Int ?? 0
