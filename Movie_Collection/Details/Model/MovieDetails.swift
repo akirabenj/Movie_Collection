@@ -9,7 +9,15 @@
 import Foundation
 
 struct MovieDetails {
-    var cast: [String]
     var genres: [String]
-    var director: String
+    var overview: String
+    var releaseDate: String
+    var tagline: String
+    
+    init(jsonDict: [String: Any], genres: [String]) {
+        self.genres = genres
+        overview = jsonDict["overview"] as? String ?? ""
+        releaseDate = jsonDict["release_date"] as? String ?? ""
+        tagline = jsonDict["tagline"] as? String ?? ""
+    }
 }

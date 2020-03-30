@@ -47,6 +47,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setCell(movie: movies[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if !movies.isEmpty {
+            let detailsView = ModuleBuilder.createDetailsModule(movie: movies[indexPath.row])
+            self.navigationController?.pushViewController(detailsView, animated: true)
+        }
+    }
 }
 
 extension MainViewController: MainViewProtocol {

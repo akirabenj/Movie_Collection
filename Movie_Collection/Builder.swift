@@ -9,15 +9,26 @@
 import UIKit
 
 protocol Builder {
-    static func createMainController() -> UIViewController
+    static func createMainModule() -> UIViewController
+    static func createDetailsModule(movie: Movie) -> UIViewController
 }
 
-class ControllerBuilder: Builder {
-    static func createMainController() -> UIViewController {
+class ModuleBuilder: Builder {
+    private static let movieService = MovieService()
+    
+    static func createMainModule() -> UIViewController {
         let viewController = MainViewController()
-        let movieService = MovieService()
         let presenter = MainPresenter(view: viewController,
-                                      movieService: movieService)
+                                      movieService: self.movieService)
+        viewController.presenter = presenter
+        return viewController
+    }
+    
+    static func createDetailsModule(movie: Movie) -> UIViewController {
+        let viewController = DetailsViewController()
+        let presenter = DetailsPresenter(view: viewController,
+                                         movieService: self.movieService,
+                                         movie: movie)
         viewController.presenter = presenter
         return viewController
     }

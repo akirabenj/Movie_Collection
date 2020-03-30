@@ -42,7 +42,7 @@ class MainPresenter: MainPresenterProtocol {
                 } else {
                     if let movies = movies {
                         self?.movies = movies
-                        self?.view?.success()
+                        self?.view?.success() // if movies fetched call success function by delegate
                     }
                 }
             }
